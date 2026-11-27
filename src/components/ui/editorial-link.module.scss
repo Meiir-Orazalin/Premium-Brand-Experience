@@ -1,0 +1,19 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border: 1px solid var(--cream);
+  border-radius: 4rem;
+  padding: 0.7rem 1.65rem;
+  color: var(--ink);
+  font-size: 0.9375rem;
+  transition:
+    background-color var(--micro),
+    color var(--micro);
+  &:hover,
+  &:focus-visible {
+    background: var(--cream);
+    color: var(--obsidian);
+  }
+}

@@ -11,3 +11,7 @@ Added the Next.js application foundation, localized routes, environment validati
 ## Phase 02
 
 Rendered localized story content through shared fixture and Sanity contracts, added responsive demo photography and tested native history with reduced-motion route transitions.
+
+## Phase 03
+
+Established the responsive photographic cover, self-hosted editorial typography, shared navigation and design tokens.

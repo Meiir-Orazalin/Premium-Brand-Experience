@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Masthead } from "@/components/layout/masthead";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { isLocale, locales } from "@/i18n/locales";
+import { isLocale } from "@/i18n/locales";
 import { repository } from "@/lib/content/repository";
 import { translation } from "@/lib/content/story";
 import styles from "./story.module.scss";
@@ -22,21 +22,7 @@ export default async function About({ params }: PageProps<"/[locale]/about">) {
   const t = await getTranslations({ locale, namespace: "home" });
   return (
     <main className={styles.story}>
-      <header>
-        <Link href={`/${locale}`}>%M%</Link>
-        <nav aria-label={t("label")}>
-          {locales.map((code) => (
-            <Link
-              key={code}
-              href={`/${code}/about`}
-              hrefLang={code}
-              aria-current={code === locale ? "page" : undefined}
-            >
-              {code.toUpperCase()}
-            </Link>
-          ))}
-        </nav>
-      </header>
+      <Masthead locale={locale} path="/about" />
       <article>
         <div>
           <h1 lang={title.lang}>{title.text}</h1>

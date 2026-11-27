@@ -1,5 +1,5 @@
 # Development status
 
-Phase 02 is at the checkpoint gate. Phase 01 passed GitHub Actions for 710414a. The localized story, adapters, generated demo photograph and route-entry prototype are implemented. Check the Phase 02 commit and Actions run before beginning the art-direction prototype.
+Phase 03 is at the review and publication gate. The preceding remote checkpoint ca44088 passed CI. The photographic art-direction prototype and glyph checks are complete. Review docs/qa/phase-03-desktop.webp and phase-03-mobile.webp. Verify the published Phase 03 commit and CI before adding hero controls.
 
-Live CMS, approved content, branch photography, map credentials, reference screenshot and deployment configuration remain unverified.
+The reference screenshot, live CMS, maps and approved business content remain outstanding.

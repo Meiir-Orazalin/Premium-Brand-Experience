@@ -1,6 +1,7 @@
-import Link from "next/link";
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { locales } from "@/i18n/locales";
+import { Masthead } from "@/components/layout/masthead";
+import { EditorialLink } from "@/components/ui/editorial-link";
 import styles from "./home.module.scss";
 export async function generateMetadata({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
@@ -12,27 +13,30 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
   const t = await getTranslations({ locale, namespace: "home" });
   return (
     <main className={styles.cover}>
-      <header className="flex items-center justify-between">
-        <span>{t("brand")}</span>
-        <nav aria-label={t("label")} className="flex gap-4">
-          {locales.map((code) => (
-            <Link
-              key={code}
-              href={`/${code}`}
-              hrefLang={code}
-              aria-current={code === locale ? "page" : undefined}
-            >
-              {code.toUpperCase()}
-            </Link>
-          ))}
-        </nav>
-      </header>
-      <div>
-        <h1>{t("title")}</h1>
-        <Link className="mt-6 inline-block underline" href={`/${locale}/about`}>
-          {t("about")}
-        </Link>
+      <Image
+        fill
+        sizes="100vw"
+        priority
+        src="/media/espresso-study.webp"
+        alt=""
+        className={styles.photo}
+      />
+      <div className={styles.shade} />
+      <Masthead locale={locale} />
+      <div className={styles.copy}>
+        <p className={styles.kicker}>
+          <i aria-hidden="true" />
+          {t("culture")}
+        </p>
+        <h1>
+          {t("line1")} <em>{t("line2")}</em>
+        </h1>
+        <EditorialLink href={`/${locale}/about`}>{t("discover")}</EditorialLink>
       </div>
+      <footer className={styles.caption}>
+        <span>{t("scene")}</span>
+        <span>{t("illustration")}</span>
+      </footer>
     </main>
   );
 }

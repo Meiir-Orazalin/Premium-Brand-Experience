@@ -9,7 +9,7 @@ Render one localized story from an interchangeable fixture or published Sanity d
 - [x] Define and test the story data contract, translation fallback and adapter selection.
 - [x] Render all locales through a server component, responsive media and localized links.
 - [x] Validate a CSS route-entry transition with native links, history, static and reduced-motion behavior.
-- [ ] Inspect desktop/mobile output, run pnpm verify, pnpm build and pnpm test:e2e, push the reviewed checkpoint and check exact-SHA CI.
+- [x] Inspect desktop/mobile output, run pnpm verify, pnpm build and pnpm test:e2e, push the reviewed checkpoint and check exact-SHA CI.
 
 ## Decisions and recovery
 
@@ -20,3 +20,5 @@ Use an explicit source setting and a read-only, parameter-free GROQ query for th
 Production assets and live services remain pending. Record local and remote evidence independently.
 
 The fixture renders end to end. Desktop and mobile Chrome captures are in docs/qa/phase-02-*.webp. Both showed zero horizontal overflow. Inspection found a missing page title, corrected before publication. Sanity transport is tested with a mocked client. Live integration is unverified.
+
+Published ca44088. [Exact-SHA CI passed](https://github.com/Meiir-Orazalin/Premium-Brand-Experience/actions/runs/45951168964).
