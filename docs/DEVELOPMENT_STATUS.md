@@ -1,5 +1,7 @@
 # Development status
 
-Phase 00, documentation publication gate. Repository audit, product specification, delivery sequence, architecture, design and measurement contracts prepared. First remote checkpoint pending at preparation time. No prior checkpoint or application CI exists.
+Phase 01 is active. Phase 00 passed its remote gate at e51a185. No workflow applied to that documentation-only checkpoint.
 
-Next action: verify the documentation checkpoint against origin/development/m-coffee, then begin Phase 01. Use Git and exact-commit Actions results for live status. Live Sanity, map provider, production origin, approved brand assets, reference screenshot and business content require verification before release.
+The application foundation, locale smoke tests and CI workflow passed local verification. See [Phase 01](plans/phase-01.md) for milestones. Next action: verify publication and exact-SHA CI before beginning the content vertical slice.
+
+Production Sanity, maps, hosting, brand media and approved business content remain outstanding. The reference screenshot was absent from the checkout.

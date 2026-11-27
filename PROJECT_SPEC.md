@@ -6,18 +6,18 @@ Visitors discover the brand, explore drinks, find a café and read the journal. 
 
 ## Routes and acceptance
 
-| Route | Visitor outcome |
-| --- | --- |
-| / | Enter the Russian experience |
-| /[locale] | Navigate seven coordinated sections described below |
-| /[locale]/about | Read the brand story in an editorial layout |
-| /[locale]/menu | Switch categories, inspect featured products, availability and accessible details. Format verified prices in KZT |
-| /[locale]/locations | Filter a usable list, synchronize selected cards and map markers |
-| /[locale]/locations/[slug] | Inspect branch photography, verified hours and directions |
-| /[locale]/journal | Browse featured articles and filter by category |
-| /[locale]/journal/[slug] | Read localized rich text, date and metadata |
-| /[locale]/contact | Find verified contact channels |
-| /studio | Manage content through Sanity Studio |
+| Route                      | Visitor outcome                                                                                                  |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| /                          | Enter the Russian experience                                                                                     |
+| /[locale]                  | Navigate seven coordinated sections described below                                                              |
+| /[locale]/about            | Read the brand story in an editorial layout                                                                      |
+| /[locale]/menu             | Switch categories, inspect featured products, availability and accessible details. Format verified prices in KZT |
+| /[locale]/locations        | Filter a usable list, synchronize selected cards and map markers                                                 |
+| /[locale]/locations/[slug] | Inspect branch photography, verified hours and directions                                                        |
+| /[locale]/journal          | Browse featured articles and filter by category                                                                  |
+| /[locale]/journal/[slug]   | Read localized rich text, date and metadata                                                                      |
+| /[locale]/contact          | Find verified contact channels                                                                                   |
+| /studio                    | Manage content through Sanity Studio                                                                             |
 
 Homepage sequence: fullscreen photographic hero with floating navigation, central wordmark, frame, headline, CTA, interactive editorial cards, scene progress and pause; asymmetric philosophy spread; filterable signature collection; scroll-driven preparation story; spaces and branch links; featured journal and grid; footer with large wordmark, navigation, contacts and language switcher. Hero scenes cover the brand, the coffee and the space. Provide independent mobile composition and navigation.
 

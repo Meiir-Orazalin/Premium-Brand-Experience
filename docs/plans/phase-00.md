@@ -9,7 +9,7 @@ Make the approved project recoverable from Git and establish a verifiable develo
 - [x] Inspect workspace, clone origin, fetch, inspect branches, history, authentication availability and repository contents.
 - [x] Record the approved routes, scope, delivery sequence, design, architecture, budgets, QA and asset inventory.
 - [x] Establish fixture-first integration strategy and recovery instructions.
-- [ ] Publish the documentation checkpoint and verify its remote ref.
+- [x] Publish the documentation checkpoint and verify its remote ref.
 
 ## Acceptance and validation
 
@@ -21,4 +21,4 @@ Use the shared adapter decision in ADR 0001. Live CMS, maps, deployment and appr
 
 ## Recovery and outcome
 
-Documentation is prepared locally. Inspect Git and the remote ref for publication status. Retry a failed push after restoring authorized access. Begin Phase 01 only after this checkpoint exists remotely.
+Documentation was published and the matching remote SHA verified. Inspect Git and the remote ref for publication status. Retry a failed push after restoring authorized access. Begin Phase 01 only after this checkpoint exists remotely.

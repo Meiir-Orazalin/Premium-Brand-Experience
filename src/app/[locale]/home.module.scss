@@ -1,0 +1,16 @@
+.cover {
+  min-height: 100svh;
+  padding: clamp(1.25rem, 4vw, 4rem);
+  display: grid;
+  align-content: space-between;
+  h1 {
+    font:
+      normal clamp(3rem, 10vw, 10rem)/1 Georgia,
+      serif;
+    max-width: 12ch;
+  }
+  [aria-current] {
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+}
