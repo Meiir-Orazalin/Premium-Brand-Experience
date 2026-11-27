@@ -9,7 +9,7 @@ Build the smallest production-mode localized application and run it through GitH
 - [x] Pin the runtime and package manager, lock dependencies and validate configuration.
 - [x] Serve RU, KK and EN using strict TypeScript, Next App Router, next-intl, Tailwind and SCSS.
 - [x] Pass formatting, lint, types, unit tests, production build and browser smoke tests.
-- [ ] Measure the production baseline. Review changes, commit, push and verify exact-SHA CI.
+- [x] Measure the production baseline. Review changes, commit, push and verify exact-SHA CI.
 
 ## Validation and recovery
 
@@ -18,3 +18,5 @@ Run pnpm install --frozen-lockfile, pnpm verify, pnpm build and pnpm test:e2e. I
 ## Decisions, discoveries, blockers and outcomes
 
 Use the observed Node 24 LTS runtime. Keep locale routing explicit and support direct static paths. Service credentials are unnecessary for this milestone. Local gates passed. See [baseline evidence](../qa/phase-01.md). Verify the pushed checkpoint and workflow before continuing.
+
+Remote verification passed for 710414a in [Actions](https://github.com/Meiir-Orazalin/Premium-Brand-Experience/actions/runs/45950614485).

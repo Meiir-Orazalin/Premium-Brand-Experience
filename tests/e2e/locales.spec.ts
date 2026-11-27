@@ -18,3 +18,22 @@ test("opens in Russian and switches language with native links", async ({
   }
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
 });
+test("reads a localized story with reduced motion and restores native history", async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/en");
+  await page.getByRole("link", { name: "Our philosophy" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Time for coffee" }),
+  ).toBeVisible();
+  await expect(page.locator(".page-entry")).toHaveCSS("animation-name", "none");
+  await page.getByRole("link", { name: "KK", exact: true }).click();
+  await expect(page).toHaveURL(/\/kk\/about$/);
+  await page.goBack();
+  await expect(page).toHaveURL(/\/en\/about$/);
+  await page.goForward();
+  await expect(
+    page.getByRole("heading", { name: "Кофеге арналған сәт" }),
+  ).toBeVisible();
+});

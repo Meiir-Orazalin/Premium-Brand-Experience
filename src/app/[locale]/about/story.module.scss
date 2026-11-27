@@ -1,0 +1,59 @@
+.story {
+  padding: clamp(1.25rem, 4vw, 4rem);
+  min-height: 100svh;
+  header,
+  nav,
+  article {
+    display: flex;
+    gap: 1rem;
+  }
+  header,
+  article {
+    justify-content: space-between;
+  }
+  header {
+    border-bottom: 1px solid #59483b;
+    padding-bottom: 1rem;
+    align-items: center;
+  }
+  header > a {
+    font:
+      2.1rem Georgia,
+      serif;
+  }
+  [aria-current] {
+    text-decoration: underline;
+  }
+  article {
+    margin: clamp(3rem, 10vh, 8rem) auto;
+    align-items: center;
+    gap: 5vw;
+  }
+  article > div,
+  figure {
+    flex: 1;
+  }
+  h1 {
+    font:
+      normal clamp(3rem, 7vw, 8rem)/1 Georgia,
+      serif;
+    letter-spacing: -0.035em;
+  }
+  p {
+    font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+    max-width: 42ch;
+    line-height: 1.5;
+    margin-top: 2rem;
+  }
+  figcaption {
+    margin-top: 0.7rem;
+    color: #c3a98e;
+    font-size: 0.875rem;
+  }
+  @media (max-width: 720px) {
+    article {
+      display: grid;
+      gap: 2rem;
+    }
+  }
+}

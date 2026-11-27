@@ -1,7 +1,5 @@
 # Development status
 
-Phase 01 is active. Phase 00 passed its remote gate at e51a185. No workflow applied to that documentation-only checkpoint.
+Phase 02 is at the checkpoint gate. Phase 01 passed GitHub Actions for 710414a. The localized story, adapters, generated demo photograph and route-entry prototype are implemented. Check the Phase 02 commit and Actions run before beginning the art-direction prototype.
 
-The application foundation, locale smoke tests and CI workflow passed local verification. See [Phase 01](plans/phase-01.md) for milestones. Next action: verify publication and exact-SHA CI before beginning the content vertical slice.
-
-Production Sanity, maps, hosting, brand media and approved business content remain outstanding. The reference screenshot was absent from the checkout.
+Live CMS, approved content, branch photography, map credentials, reference screenshot and deployment configuration remain unverified.

@@ -2,6 +2,9 @@
   "home": {
     "title": "More than coffee.",
     "label": "Language",
-    "brand": "%M% Coffee"
+    "brand": "%M% Coffee",
+    "about": "Our philosophy",
+    "illustration": "Illustrative image · demo content",
+    "espressoAlt": "Espresso streaming into a ceramic cup"
   }
 }

@@ -9,3 +9,18 @@
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .page-entry {
+    animation: page-enter 700ms ease-out both;
+  }
+  @keyframes page-enter {
+    from {
+      opacity: 0.88;
+      transform: translateY(3px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

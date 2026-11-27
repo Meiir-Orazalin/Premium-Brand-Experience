@@ -27,7 +27,12 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           ))}
         </nav>
       </header>
-      <h1>{t("title")}</h1>
+      <div>
+        <h1>{t("title")}</h1>
+        <Link className="mt-6 inline-block underline" href={`/${locale}/about`}>
+          {t("about")}
+        </Link>
+      </div>
     </main>
   );
 }

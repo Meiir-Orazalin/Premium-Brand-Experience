@@ -7,3 +7,7 @@ Established the product specification, repository workflow, architecture decisio
 ## Phase 01
 
 Added the Next.js application foundation, localized routes, environment validation and the GitHub Actions verification workflow.
+
+## Phase 02
+
+Rendered localized story content through shared fixture and Sanity contracts, added responsive demo photography and tested native history with reduced-motion route transitions.
