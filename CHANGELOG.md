@@ -15,3 +15,7 @@ Rendered localized story content through shared fixture and Sanity contracts, ad
 ## Phase 03
 
 Established the responsive photographic cover, self-hosted editorial typography, shared navigation and design tokens.
+
+## Phase 04
+
+Added interactive scene cards, a three-scene photographic hero, opt-in playback with pause, media failure handling and keyboard-accessible mobile navigation.

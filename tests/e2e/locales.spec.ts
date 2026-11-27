@@ -23,7 +23,7 @@ test("reads a localized story with reduced motion and restores native history", 
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/en");
-  await page.getByRole("link", { name: "Our philosophy" }).click();
+  await page.getByRole("link", { name: "Explore the story" }).click();
   await expect(
     page.getByRole("heading", { name: "Time for coffee" }),
   ).toBeVisible();

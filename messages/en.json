@@ -10,6 +10,18 @@
     "line1": "More than",
     "line2": "coffee.",
     "discover": "Explore the story",
-    "scene": "The brand story"
+    "scene": "The brand story",
+    "brandScene": "Brand",
+    "coffeeScene": "Coffee",
+    "spaceScene": "Spaces",
+    "coffee1": "A cup of",
+    "coffee2": "quiet.",
+    "space1": "Room to",
+    "space2": "linger.",
+    "play": "Play scenes",
+    "pause": "Pause scenes",
+    "scenes": "Scenes",
+    "navigation": "Explore",
+    "home": "Home"
   }
 }

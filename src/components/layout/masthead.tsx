@@ -1,3 +1,4 @@
+import { Navigation } from "./navigation";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { locales } from "@/i18n/locales";
@@ -12,10 +13,13 @@ export async function Masthead({
   const t = await getTranslations({ locale, namespace: "home" });
   return (
     <header className={styles.bar}>
-      <Link className={styles.section} href={`/${locale}/about`}>
-        <span className={styles.lines} aria-hidden="true" />
-        {t("about")}
-      </Link>
+      <Navigation
+        label={t("navigation")}
+        items={[
+          { label: t("home"), href: `/${locale}` },
+          { label: t("about"), href: `/${locale}/about` },
+        ]}
+      />
       <Link className={styles.mark} href={`/${locale}`} aria-label={t("brand")}>
         %M%
       </Link>

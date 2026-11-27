@@ -62,3 +62,35 @@
     font-size: 2rem;
   }
 }
+.menu {
+  position: relative;
+  justify-self: start;
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    min-height: 2.75rem;
+    font-size: 0.9rem;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  div {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 13rem;
+    background: var(--espresso);
+    border: var(--border);
+    box-shadow: var(--shadow);
+    padding: 0.65rem;
+  }
+  div a {
+    display: block;
+    padding: 0.7rem;
+  }
+  div a:hover {
+    text-decoration: underline;
+  }
+}

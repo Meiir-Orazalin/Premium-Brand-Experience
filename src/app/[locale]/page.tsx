@@ -1,8 +1,6 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Masthead } from "@/components/layout/masthead";
-import { EditorialLink } from "@/components/ui/editorial-link";
-import styles from "./home.module.scss";
+import { Hero } from "@/features/home/hero";
 export async function generateMetadata({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
@@ -11,32 +9,38 @@ export async function generateMetadata({ params }: PageProps<"/[locale]">) {
 export default async function Home({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
+  const scenes = [
+    {
+      name: t("brandScene"),
+      line1: t("line1"),
+      line2: t("line2"),
+      image: "/media/espresso-study.webp",
+    },
+    {
+      name: t("coffeeScene"),
+      line1: t("coffee1"),
+      line2: t("coffee2"),
+      image: "/media/coffee.webp",
+    },
+    {
+      name: t("spaceScene"),
+      line1: t("space1"),
+      line2: t("space2"),
+      image: "/media/space.webp",
+    },
+  ].map((s) => ({ ...s, href: `/${locale}/about`, action: t("discover") }));
   return (
-    <main className={styles.cover}>
-      <Image
-        fill
-        sizes="100vw"
-        priority
-        src="/media/espresso-study.webp"
-        alt=""
-        className={styles.photo}
-      />
-      <div className={styles.shade} />
-      <Masthead locale={locale} />
-      <div className={styles.copy}>
-        <p className={styles.kicker}>
-          <i aria-hidden="true" />
-          {t("culture")}
-        </p>
-        <h1>
-          {t("line1")} <em>{t("line2")}</em>
-        </h1>
-        <EditorialLink href={`/${locale}/about`}>{t("discover")}</EditorialLink>
-      </div>
-      <footer className={styles.caption}>
-        <span>{t("scene")}</span>
-        <span>{t("illustration")}</span>
-      </footer>
+    <main>
+      <Hero
+        scenes={scenes}
+        culture={t("culture")}
+        caption={t("illustration")}
+        controls={t("scenes")}
+        play={t("play")}
+        pause={t("pause")}
+      >
+        <Masthead locale={locale} />
+      </Hero>
     </main>
   );
 }
